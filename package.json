@@ -8,7 +8,10 @@
     "start": "nps",
     "dev": "npm start dev",
     "build": "npm start build",
-    "test": "npm start test"
+    "test": "npm start test",
+    "clean": "npm start clean",
+    "release": "npm start release",
+    "hooks:pre-commit": "node testswagger.js"
   },
   "keywords": [
     "node",

@@ -58,7 +58,11 @@ module.exports = {
             test: banner('test'),
             release: banner('release'),
             clean: banner('clean project'),
-        },    
+        },
+        release: {
+            script: series('nps banner.release', 'taggit'),
+            description: 'Tag git commit',
+        },
     }
 };
 
