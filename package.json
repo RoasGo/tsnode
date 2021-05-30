@@ -9,10 +9,6 @@
     "dev": "npm start dev",
     "build": "npm start build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RoasGo/tsnode.git"
-  },
   "keywords": [
     "node",
     "typescript"
