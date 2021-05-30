@@ -1,0 +1,19 @@
+default:
+  service:
+    name: sr-library
+    port: 3000
+    databases:
+      main:
+        dialect: mongodb
+        host: mongodb+srv://@devroa.gofhu.mongodb.net/test
+        port: 27017
+        dbName: library
+        user: roasg
+        password: 9OmH981UGQLrhmx4
+    jwt:
+  metadata:
+    enviroment: local
+    cookie:
+      domain: ''
+      sameSite: 'None'
+      httpOnly: false
