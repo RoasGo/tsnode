@@ -10,9 +10,7 @@
     "build": "npm start build",
     "test": "npm start test",
     "clean": "npm start clean",
-    "release": "npm start release",
-    "hooks:pre-commit": "node testswagger.js",
-    "prepare": "husky install"
+    "release": "npm start release"
   },
   "keywords": [
     "node",

@@ -26,7 +26,7 @@ module.exports = {
             description: 'Builds the app into the dist directory',
         },
         test: {
-            script: series('nps banner.test'),
+            script: series('nps banner.test', 'npm run build'),
             description: 'Run untary test of app',
         },
         clean: {
