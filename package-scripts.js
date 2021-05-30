@@ -52,7 +52,7 @@ module.exports = {
               script: copyDir('./config', './dist/config'),
               hiddenFromHelp: true,
             },
-        },        
+        },
         banner: {
             build: banner('build'),
             test: banner('test'),
