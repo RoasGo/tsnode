@@ -26,11 +26,8 @@ module.exports = {
             description: 'Builds the app into the dist directory',
         },
         test: {
-            default: 'jest',
-            watch: {
-                script: 'jest --watch',
-                description: 'run in the amazingly intelligent Jest watch mode'
-            }
+            script: series('nps banner.test'),
+            description: 'Run untary test of app',
         },
         clean: {
             default: {
