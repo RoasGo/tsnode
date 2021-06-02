@@ -32,16 +32,16 @@ class App {
       this.logger.info('Loading middlewares...');
       const stream = {
          write: (message) => this.logger.http(message),
-       };
+      };
       const skip = () => {
          const env = process.env.NODE_ENV || 'local';
          return env !== 'local';
       };
-      const morganMiddleware = morgan(
-         ':method :url :status :res[content-length] - :response-time ms',
-         { stream, skip }
-      );
-      
+      const morganMiddleware = morgan(':method :url :status :res[content-length] - :response-time ms', {
+         stream,
+         skip,
+      });
+
       this.express.use(morganMiddleware);
       // Cross-origin
       this.express.use((req: express.Request, res: express.Response, next) => {
