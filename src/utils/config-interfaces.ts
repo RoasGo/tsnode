@@ -1,29 +1,29 @@
 export interface IDefault {
-  service: {
-    name: string;
-    port: number;
-    databases: {
-      main: {
-        dialect: string;
-        host: string;
-        port: number;
-        dbName: string;
-        user: string;
-        password: string;
+   service: {
+      name: string;
+      port: number;
+      databases: {
+         main: {
+            dialect: string;
+            host: string;
+            port: number;
+            dbName: string;
+            user: string;
+            password: string;
+         };
       };
-    };
-    jwt: {};
-  };
-  metadata: {
-    enviroment: string;
-    cookie: {
-      domain: '';
-      sameSite: string;
-      httpOnly: string;
-    };
-  };
+      jwt: {};
+   };
+   metadata: {
+      enviroment: string;
+      cookie: {
+         domain: '';
+         sameSite: string;
+         httpOnly: string;
+      };
+   };
 }
 
 export interface IConfig {
-  default: IDefault;
+   default: IDefault;
 }
