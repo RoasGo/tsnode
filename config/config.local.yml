@@ -4,12 +4,12 @@ default:
     port: 3000
     databases:
       main:
-        dialect: mongodb
-        host: mongodb+srv://@devroa.gofhu.mongodb.net/test
-        port: 27017
-        dbName: library
-        user: roasg
-        password: 9OmH981UGQLrhmx4
+        dialect: postgresql
+        host: 127.0.0.1
+        port: 5433
+        dbName: entel-postgresql
+        user: postgres
+        password: developer123
     jwt:
   metadata:
     enviroment: local

@@ -4,3 +4,4 @@ package-lock.json
 # config
 .husky
 logs
+.vscode

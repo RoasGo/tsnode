@@ -8,6 +8,7 @@ import * as morgan from 'morgan';
 
 import Config from './utils/config';
 import { IDefault } from './utils/config-interfaces';
+import * as errorHandler from './helpers/error.helper';
 
 class App {
    public express: express.Application;
@@ -22,6 +23,7 @@ class App {
       this.initDatabase();
       this.setMiddlewares();
       this.setRoutes();
+      this.catchErrors();
    }
 
    private initDatabase(): void {
@@ -63,8 +65,14 @@ class App {
    private setRoutes(): void {
       this.logger.info('Loading api routes...');
       // Set your routes
-      console.log('Acá van las rutas');
+      const api = require('./api');
+      this.express.use('/api', api.default);
       this.logger.info('Api routes loaded...');
+   }
+
+   private catchErrors(): void {
+      this.express.use(errorHandler.notFound);
+      this.express.use(errorHandler.errorHandler);
    }
 }
 
